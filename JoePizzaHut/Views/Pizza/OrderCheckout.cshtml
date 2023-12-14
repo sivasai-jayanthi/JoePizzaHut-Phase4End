@@ -1,0 +1,15 @@
+﻿<!-- Views/Pizza/OrderCheckout.cshtml -->
+@{
+    Layout = "_Layout";
+}
+<body style="background-image: url('https://img.freepik.com/free-photo/composition-tasty-traditional-pizza_23-2148921367.jpg?w=1060&t=st=1702458376~exp=1702458976~hmac=075419f16348e1675b62080341282928d21be495224235cedf0bff6c01c22008'); background-size: cover;">
+    <h2 >Order Summary</h2>
+    <p >Pizza Type: @Model.PizzaType</p>
+    <p >Quantity: @Model.Quantity</p>
+    <p >Amount: @Model.Amount</p>
+
+
+<form method="post" asp-action="OrderConfirmation">
+    <button type="submit">Checkout</button>
+</form>
+</body>

@@ -1,0 +1,23 @@
+﻿<!-- Views/Pizza/PizzaSelection.cshtml -->
+@{
+    Layout = "_Layout";
+}
+<body style="background-image: url('https://img.freepik.com/free-photo/composition-tasty-traditional-pizza_23-2148921367.jpg?w=1060&t=st=1702458376~exp=1702458976~hmac=075419f16348e1675b62080341282928d21be495224235cedf0bff6c01c22008'); background-size: cover;">
+    <h1> Welcome To JoePizzaHut </h1>
+    <form method="post" asp-action="OrderCheckout">
+        <label for="PizzaType">Select Pizza Type:</label>
+        <select name="PizzaType">
+            <!-- Add options for pizza types -->
+            <option value="Margherita">Margherita</option>
+            <option value="Pepperoni">Pepperoni</option>
+            <option value="vegetarian">vegetarian</option>
+            <option value="BBQChicken">BBQ Chicken</option>
+            <!-- Add more options as needed -->
+        </select>
+
+        <label for="Quantity">Quantity:</label>
+        <input type="number" name="Quantity" />
+
+        <button type="submit">Add to Cart</button>
+    </form>
+</body>
